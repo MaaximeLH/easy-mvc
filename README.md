@@ -1,2 +1,3 @@
-# easy-mvc
+# Easy MVC
+
 An easy MVC Framework
