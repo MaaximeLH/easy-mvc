@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# A dé-commenter si le dossier public n'est pas la racine du site
+# RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]
