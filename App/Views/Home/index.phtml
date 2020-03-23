@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page</title>
+    <title><?= \Core\Language::get('utils.home'); ?></title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/assets/css/style.css" />
     <!--[if lt IE 9]>
@@ -22,11 +22,12 @@
         <div class="cloud x5"></div>
     </div>
     <div class="container">
-        <div class="title">Hello</div>
+        <div class="title"><?= \Core\Language::get('utils.hello') ?></div>
         <hr><br>
         <div class="text1">Easy MVC Framework</div>
         <br><br>
         <a class="button" href="https://github.com/MaaximeLH/easy-mvc">GITHUB</a>
+        <a class="button" href="/?lang=<?= $demoLang ?>"><?= $demoLang ?></a>
     </div>
 </body>
 </html>

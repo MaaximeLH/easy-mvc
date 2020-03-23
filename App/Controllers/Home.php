@@ -2,11 +2,24 @@
 
 namespace App\Controllers;
 
+use Core\Language;
+use Core\Request;
 use \Core\View;
 
 class Home extends \Core\Controller
 {
     public function indexAction() {
-        View::render('Home/index');
+
+        $params = Request::getAllParams();
+
+        if(!empty($params['lang'])) {
+            $this->setLanguage($params['lang']);
+            $this->redirectTo(strtok($_SERVER['REQUEST_URI'], "?"));
+        }
+
+        View::render('Home/index', [
+                'demoLang' => ($this->getLanguage() == "fr_FR") ? 'en_US' : 'fr_FR'
+            ]
+        );
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use App\Config;
+
 abstract class Controller
 {
     protected $route_parameters = [];
@@ -24,6 +26,25 @@ abstract class Controller
     }
 
     protected function before() {
+        if(
+            (
+                isset($_COOKIE['language']) &&
+                !in_array($_COOKIE['language'], Config::LANGUAGES)
+            ) ||
+            !isset($_COOKIE['language'])
+        ) {
+            setcookie('language', Config::DEFAULT_LANGUAGE, time() + 3600 * 24 * 30); // One month
+        }
+    }
+
+    protected function getLanguage() {
+        return $_COOKIE['language'];
+    }
+
+    protected function setLanguage($lang) {
+        if(in_array($lang, Config::LANGUAGES)) {
+            setcookie('language', $lang, time() + 3600 * 24 * 30); // One month
+        }
     }
 
     protected function after() {
