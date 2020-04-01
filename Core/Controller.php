@@ -38,7 +38,7 @@ abstract class Controller
     }
 
     protected function getLanguage() {
-        return $_COOKIE['language'];
+        return $_COOKIE['language'] ?? Config::DEFAULT_LANGUAGE;
     }
 
     protected function setLanguage($lang) {
