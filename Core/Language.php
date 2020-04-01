@@ -8,7 +8,7 @@ class Language {
 
 
     public static function get($key, $args = []) {
-        $lang = $_COOKIE['language'];
+        $lang = $_COOKIE['language'] ?? Config::DEFAULT_LANGUAGE;
 
         if(!in_array($lang, Config::LANGUAGES)) {
             $lang = Config::DEFAULT_LANGUAGE;
