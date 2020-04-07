@@ -6,7 +6,7 @@ use App\Config;
 
 abstract class Controller
 {
-    protected $route_parameters = [];
+    protected array $route_parameters = [];
 
     public function __construct($route_parameters) {
         $this->route_parameters = $route_parameters;

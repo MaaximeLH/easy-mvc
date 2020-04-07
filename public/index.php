@@ -11,4 +11,6 @@ $router = new Core\Router();
  */
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
 
+$router->add('orm-example', ['controller' => 'Home', 'action' => 'example']);
+
 $router->dispatch($_SERVER['QUERY_STRING']);
