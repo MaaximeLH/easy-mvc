@@ -40,7 +40,7 @@ See examples :
          * Example of usage with repository
          *
          * $user = $repository->findBy(['email' => 'maxime@lehenaff.pro']); // Find all users where email = maxime@lehenaff.pro
-         * $user = $repository->findOneByEmail(['email' => 'maxime@lehenaff.pro']); // Find all users where email = maxime@lehenaff.pro
+         * $user = $repository->findOneByEmail(['email' => 'maxime@lehenaff.pro']); // Find one user where email = maxime@lehenaff.pro
          * $user = $repository->findAll(); // Find all users
          **/
     
