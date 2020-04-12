@@ -77,3 +77,11 @@ See examples :
 ```
 
 For more, see the Doctrine ORM documentations.
+
+# Generate Entities from database
+
+If you have already tables in your database, you can generate Entities automatically with the following command.
+
+```bash
+vendor/bin/doctrine orm:convert-mapping --from-database annotation App/Entity
+```
