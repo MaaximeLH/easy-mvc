@@ -26,7 +26,6 @@ class Home extends \Core\Controller
     
     public function exampleAction() {
     
-        /** @var EntityManager $em */
         $em = Entity::getEntityManager();
         
         // Get repository for User::class
