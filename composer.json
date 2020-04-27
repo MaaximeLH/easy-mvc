@@ -1,4 +1,18 @@
 {
+    "name": "maaximelh/easy-mvc",
+    "type": "library",
+    "description": "An easy MVC Framework which implements Doctrine ORM",
+    "keywords": ["framework"],
+    "homepage": "https://github.com/maaximelh/easy-mvc",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Maxime LE HENAFF",
+        "email": "maxime@lehenaff.pro",
+        "role": "Author",
+        "homepage": "https://maxime.lehenaff.pro"
+      }
+    ],
     "autoload": {
         "psr-4": {
              "Core\\": "Core/",
