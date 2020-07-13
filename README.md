@@ -78,4 +78,8 @@ If you have already tables in your database, you can generate Entities automatic
 
 ```bash
 php generator.php
+
+# OR
+
+vendor/bin/doctrine orm:convert-mapping --from-database annotation App/Entity
 ```
