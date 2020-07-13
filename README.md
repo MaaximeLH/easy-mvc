@@ -38,7 +38,7 @@ Example of finder with repository.
 
 ```php
 $user = $repository->findBy(['email' => 'maxime@lehenaff.pro']); // Find all users where email = maxime@lehenaff.pro
-$user = $repository->findOneByEmail(['email' => 'maxime@lehenaff.pro']); // Find one user where email = maxime@lehenaff.pro
+$user = $repository->findOneByEmail('maxime@lehenaff.pro'); // Find one user where email = maxime@lehenaff.pro
 $user = $repository->findAll(); // Find all users
 ```
 
@@ -77,5 +77,5 @@ For more, see the Doctrine ORM documentations.
 If you have already tables in your database, you can generate Entities automatically with the following command.
 
 ```bash
-vendor/bin/doctrine orm:convert-mapping --from-database annotation App/Entity
+php generator.php
 ```
